@@ -1,1 +1,40 @@
-{     "devDependencies": {         "raw-body": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-raw-body",     "homepage": "https://github.com/npmtest/node-npmtest-raw-body",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-raw-body.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### basic test coverage for  [raw-body (v2.2.0)](https://github.com/stream-utils/raw-body#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-raw-body.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-raw-body) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-raw-body.svg)](https://travis-ci.org/npmtest/node-npmtest-raw-body)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "raw-body": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-raw-body",
+    "keywords": [
+        "coverage",
+        "test",
+        "raw-body"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_raw_body.js",
+    "name": "npmtest-raw-body",
+    "nameAlias": "npmtest_raw_body",
+    "nameOriginal": "npmtest-raw-body",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-raw-body.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
