@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-raw-body/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-raw-body/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-raw-body/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-raw-body/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-raw-body/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-raw-body/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-raw-body/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-raw-body/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-raw-body/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-raw-body/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-raw-body/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-raw-body/build/coverage.html/index.html)
 
@@ -105,7 +105,8 @@
         "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --trace-deprecation --reporter dot --check-leaks test/",
         "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --trace-deprecation --reporter spec --check-leaks test/"
     },
-    "version": "2.2.0"
+    "version": "2.2.0",
+    "bin": {}
 }
 ```
 
